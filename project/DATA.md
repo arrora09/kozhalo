@@ -2,10 +2,10 @@
 
 A `data/` mappa három fájljából két gráf építhető:
 
-1. **Bipartit hős–képregény gráf:** melyik hős melyik képregényben szerepel.
-2. **Hős–hős szereplési gráf:** melyik két hős szerepel együtt, és hányszor.
+1. **Bipartit hős–képregény gráf:** melyik hős melyik képregényben szerepel. **A projekt ezzel a gráffal dolgozik**, ezt építi fel a `beadando.ipynb`.
+2. **Hős–hős szereplési gráf:** melyik két hős szerepel együtt, és hányszor. A `hero-network.csv`-ből épül, a projektben már nem használjuk, itt csak leírásként szerepel.
 
-A számok a jelenlegi adatokra vonatkoznak, amelyekben a `MALAN` és a `SPIDER-MAN/PETER PARKER` nevet már javítottuk. A hős–hős gráf számai a `beadando.ipynb` tisztítása utáni állapotot írják le.
+A számok a jelenlegi adatokra vonatkoznak, amelyekben a `MALAN` és a `SPIDER-MAN/PETER PARKER` nevet már javítottuk. Ahol a szöveg nem mond mást, a bipartit gráf számai a `beadando.ipynb` tisztítása utáni állapotot írják le.
 
 ## Forrásfájlok
 
@@ -13,26 +13,41 @@ A számok a jelenlegi adatokra vonatkoznak, amelyekben a `MALAN` és a `SPIDER-M
 |---|---|---|---|
 | `nodes.csv` | 19 090 | `node`, `type` | Az összes csúcs: 6439 hős (`hero`) és 12 651 képregény (`comic`) |
 | `edges.csv` | 96 104 | `hero`, `comic` | Hős–képregény szereplések, duplikátum nélkül |
-| `hero-network.csv` | 574 467 | `hero1`, `hero2` | Hős–hős együttszereplések. Egy pár annyiszor szerepel, ahány közös képregényük van. |
+| `hero-network.csv` | 574 467 | `hero1`, `hero2` | Hős–hős együttszereplések. Egy pár annyiszor szerepel, ahány közös képregényük van. A notebook nem használja. |
 
-A `nodes.csv` és az `edges.csv` teljesen konzisztens: minden hős és képregény mindkettőben megvan, és mindegyiknek van legalább egy éle.
+A `nodes.csv` és az `edges.csv` konzisztens egymással: minden hős és képregény mindkettőben megvan, és mindegyiknek van legalább egy éle. A képregényoszlopban viszont vannak hibás bejegyzések, ezeket a notebook tisztítja (lásd lent).
 
 ## 1. gráf: bipartit hős–képregény gráf
 
-**Építés:** a csúcsok a `nodes.csv`-ből jönnek (`bipartite=0` a hős, `1` a képregény), az élek az `edges.csv`-ből. A hős- és képregénynevek között nincs ütközés.
+**Építés** (`beadando.ipynb`, „Data loading and cleaning” fejezet): a csúcsok és az élek a megtisztított `edges.csv`-ből jönnek (`bipartite=0` a hős, `1` a képregény). A hős- és képregénynevek között nincs ütközés.
 
-| Mérőszám | Érték |
+| Mérőszám | Tisztítás után |
 |---|---|
-| Csúcsok | 19 090 (6439 hős + 12 651 képregény) |
-| Élek | 96 104 |
+| Csúcsok | 19 031 (6439 hős + 12 592 képregény) |
+| Élek | 96 092 |
 | Bipartit sűrűség | 0,0012 |
-| Komponensek | 22, az óriáskomponens 19 029 csúcs |
+| Komponensek | 20, az óriáskomponens 18 974 csúcs (99,7%) |
 | Képregény / hős | átlag 14,9, medián 3, max 1577 (Spider-Man) |
 | Hős / képregény | átlag 7,6, medián 6, max 111 (`COC 1`) |
 | Csak 1 képregényben szereplő hős | 1795 |
-| Csak 1 hőst tartalmazó képregény | 1480 |
+| Csak 1 hőst tartalmazó képregény | 1420 |
 
 Legtöbbet szereplő hősök: Spider-Man (1577), Captain America (1334), Iron Man (1150), Thing (963), Thor (956).
+
+### Tisztítás
+
+A nyers adat 19 090 csúcsot és 96 104 élt tartalmaz. A hősoldal tiszta, minden hiba a képregényoszlopban van:
+
+1. **Nem képregény bejegyzések törlése (10 sor):** 5 szövegtöredék (pl. `Note: Appearances in`, `rse powers.`) és 5 kód helyére írt szereplőnév (pl. `HAWKEYE/CLINT BARTON`). Egyetlen hős sem maradt emiatt képregény nélkül.
+2. **Kódok egységesítése (52 kód, a képregények száma 12 641-ről 12 592-re csökken):**
+   - dupla szóköz (`AWC  7` → `AWC 7`);
+   - `&and` a `&` helyett (`PM&andIF 100` → `PM&IF 100`);
+   - oldalszám és `-BTS` utótag (`X 83 Pg 1-8` → `X 83`, `FF 19-BTS` → `FF 19`);
+   - 10 elírás a `COMIC_FIXES` táblában (pl. `MCP 18/4` → `M/CP 18/4`).
+3. **Duplikált sorok eldobása:** az egységesítés után 2 sor lett azonos.
+4. **Átnézendő kódok (17 darab):** a notebook csak kiírja őket javaslattal, nem változtat rajtuk, mert az adatból nem dönthető el, mi a helyes alak (pl. `ASM1`, `ROA 3 & ROA 4`, `DESTROYER IV`). Összesen kb. 20 élt érintenek.
+
+A hasonló, de külön sorozatnak tűnő kódokat nem vontuk össze, pl. `HAWK2` és `HAWK 2`, `X&M` és `XM`, `M/K` és `MK`.
 
 ### Rendelkezésre álló adatok
 
@@ -42,25 +57,34 @@ Legtöbbet szereplő hősök: Spider-Man (1577), Captain America (1334), Iron Ma
   - `VEZETÉKNÉV, KERESZTNÉV`, pl. `JAMESON, J. JONAH`: 2184 név, főleg civil szereplők.
   - Alternatív univerzumbeli változat ` | ` utótaggal, pl. `WOLVERINE | MUTANT X`: 131 név. Ezek többsége Mutant X változat, néhány `TIMESLIDE`, `EARTH …` vagy `AOA`.
   - A nevek 20 karakterre vannak levágva (1350 név pontosan 20 karakter hosszú).
-- **A képregénykód szerkezete:** `SOROZAT SZÁM`, pl. `ASM 22`, `FF 48`. Ebből kb. 670 sorozat-előtag nyerhető ki, a legnagyobbak: `ASM` (473), `M/CP` (462), `T` (461), `FF` (433), `CA` (429). Kivételek:
-  - 2322 kódban `/` van (pl. `ASM 22/3`), aminek a jelentése az adatból nem derül ki;
-  - 85 kódban nincs szám (pl. `DOOM`, `TB:LS`);
+- **A képregénykód szerkezete:** `SOROZAT SZÁM`, pl. `ASM 22`, `FF 48`. Ebből kb. 650 sorozat-előtag nyerhető ki, a legnagyobbak: `ASM` (473), `M/CP` (462), `T` (461), `FF` (432), `CA` (429). Kivételek:
+  - 1610 kód számrészében van `/` (pl. `ASM 22/3`), aminek a jelentése az adatból nem derül ki;
+  - 84 kódban nincs szám (pl. `DOOM`, `TB:LS`);
   - 2 kód két kiadást jelöl egyszerre (`TTA 12 | WWT 21`).
 
 ### Elemzési lehetőségek
 
 - Fokszám-eloszlás külön a két oldalon (hősök és képregények), összevetés véletlen modellekkel.
-- Bipartit vetítés a hősökre: ez adja a 2. gráfot, de tiszta forrásból (lásd lent). Vetíthető a képregényekre is: két képregény akkor kapcsolódik, ha van közös hősük.
+- Bipartit centralitás (`nx.bipartite`), hogy a hősöket a képregényeken keresztüli kapcsolataik alapján rangsoroljuk.
 - Sorozatszintű összesítés a kód előtagja alapján, pl. hős–sorozat gráf, vagy mely hősök kötik össze a sorozatokat.
 - Bipartit klaszterezés és redundancia (`nx.bipartite`).
 
+### Elemzési lehetőségek a laborok alapján
+
+| Labor | Alkalmazás a bipartit gráfra |
+|---|---|
+| 02 Metrics | Fokszám-, közelség-, köztiség- és sajátvektor-centralitás bipartit változatban (`nx.bipartite`), a rangsorok összevetése |
+| 03 Connectivity | Átlagos úthossz, átmérő, komponensek, a központi hősök vagy nagy képregények eltávolításának hatása |
+| 04 Visualization | Részgráfok rajzolása (pl. a top hősök és képregényeik, egy hős vagy sorozat környezete) |
+| 05 Random Networks | A két oldal fokszám-eloszlásának összevetése véletlen bipartit modellel |
+| 06 Community Detection | Közösségkeresés, a közösségek összevetése az ismert csapatokkal (X-Men, Bosszúállók, Fantasztikus Négyes) |
+| 07 Diffusion | Terjedés hősökön és képregényeken keresztül, a legbefolyásosabb kezdőhősök keresése |
+
 ## 2. gráf: hős–hős szereplési gráf
 
-**Építés** (`beadando.ipynb`, „Data loading and cleaning” fejezet):
-1. szóközök levágása a nevekről;
-2. hurokélek eldobása;
-3. a duplikált párok egy irányítatlan éllé vonása, `weight` = az együttszereplések száma;
-4–5. a 3 csonkolt név átnevezése (`BLADE/`, `SABRE/`, `SPIDER-MAN/PETER PARKER`).
+Ezzel a gráffal nem megyünk tovább, a leírása csak tájékoztató jellegű.
+
+**Építés** (a notebook korábbi változatában): szóközök levágása a nevekről, hurokélek eldobása (2232 sor), a duplikált párok egy irányítatlan éllé vonása, `weight` = az együttszereplések száma, 3 csonkolt név javítása.
 
 | Mérőszám | Érték |
 |---|---|
@@ -73,38 +97,14 @@ Legtöbbet szereplő hősök: Spider-Man (1577), Captain America (1334), Iron Ma
 | Átlagos klaszterezettség | 0,775 |
 | Tranzitivitás | 0,195 |
 
-- Legnagyobb fokszám (különböző társszereplők száma): Captain America (1903), Spider-Man (1737), Iron Man (1521), Thing (1416), Mr. Fantastic (1377), Wolverine (1368).
-- Legnagyobb súlyozott fokszám: Captain America (16 259), Spider-Man (13 717), Iron Man (11 817), Thor (11 427).
-- Legerősebb élek: a Fantastic Four tagjai között 700 fölötti súlyok. A `MISS AMERICA`–`PATRIOT` pár 1894-es súlya viszont adathiba (lásd lent).
+## Miért nem a `hero-network.csv`?
 
-Hiányzik 18 hős, aki a `nodes.csv`-ben szerepel: ők csak olyan képregényekben vannak, ahol rajtuk kívül nincs más hős, ezért nincs élük. Ha kellenek, izolált csúcsként hozzáadhatók.
+A fájl súlyai nem megbízhatók: **53 pár** több együttszereplést mutat, mint ahány képregényben a két hős közül a kevesebbet szereplő egyáltalán megjelenik. A legszembetűnőbb példák:
 
-### Rendelkezésre álló adatok
+- `MISS AMERICA/MADELIN`–`PATRIOT/JEFF MACE`: 1894 sor, de a Patriot csak 9 képregényben szerepel, és csak 8 közös képregényük van;
+- `BUCKY/BUCKY BARNES`–`CAPTAIN AMERICA`: 301, de a Bucky csak 47 képregényben szerepel.
 
-- **Élsúly:** az együttszereplések száma.
-- **Csúcsattribútumok:** nincsenek külön adatként, csak a névből származtathatók (álnév és valódi név, alternatív univerzum), illetve az 1. gráfból (képregények száma, sorozatok).
-
-### Elemzési lehetőségek a laborok alapján
-
-| Labor | Alkalmazás a gráfra |
-|---|---|
-| 02 Metrics | Fokszám-, közelség-, köztiség-, sajátvektor-centralitás, PageRank. A súlyozott és a súlyozatlan rangsor összevetése. |
-| 03 Connectivity | Átmérő, átlagos úthossz, hidak, vágások, óriáskomponens, a központi hősök eltávolításának hatása |
-| 04 Visualization | Részgráfok rajzolása (pl. a top-K hős, egy közösség, egy hős ego-hálózata) |
-| 05 Random Networks | Fokszám-eloszlás összevetése ER és BA modellel, kisvilág-tulajdonság (magas klaszterezettség, rövid utak) |
-| 06 Community Detection | Louvain, greedy modularity, label propagation. A közösségek összevetése az ismert csapatokkal (X-Men, Bosszúállók, Fantasztikus Négyes). |
-| 07 Diffusion | LT és IC modell, a súlyokból képzett valószínűségekkel, és a legbefolyásosabb kezdőhősök keresése |
-
-## A két gráf kapcsolata és egy fontos adathiba
-
-A bipartit gráf hősökre vetítve (`nx.bipartite.weighted_projected_graph`) ugyanazt a 6421 hőst adja, de **a két forrás nem egyezik:**
-
-- A vetítés 171 644 élt ad, a `hero-network.csv` 167 100-at. 4544 pár csak a vetítésben szerepel, és nincs olyan pár, amely csak a `hero-network.csv`-ben lenne.
-- **53 pár súlya lehetetlenül nagy a `hero-network.csv`-ben:** több együttszereplést mutat, mint ahány képregényben a két hős közül a kevesebbet szereplő egyáltalán megjelenik. A legszembetűnőbb példák:
-  - `MISS AMERICA/MADELIN`–`PATRIOT/JEFF MACE`: 1894 sor, de a Patriot csak 9 képregényben szerepel, és csak 8 közös képregényük van;
-  - `BUCKY/BUCKY BARNES`–`CAPTAIN AMERICA`: 301, de a Bucky csak 47 képregényben szerepel.
-
-**Következmény:** a súlyozott elemzésekhez (súlyozott centralitás, diffúziós valószínűségek, súlyozott layout) megbízhatóbb a vetített gráf súlyait használni, vagy legalább ellenőrizni a `hero-network.csv` súlyait. A súlyozatlan szerkezetet ez kevésbé érinti.
+A fájl az `edges.csv`-vel sem egyezik: 4544 hőspár közös képregénye hiányzik belőle. A bipartit gráfot ez nem érinti, mert az `edges.csv` közvetlen hős–képregény adatokból épül.
 
 ## Ami nincs az adatokban
 
@@ -112,11 +112,11 @@ A bipartit gráf hősökre vetítve (`nx.bipartite.weighted_projected_graph`) ug
 - **Szereplőattribútumok:** nincs nem, csapat, oldal (hős vagy gonosz), sem első megjelenés.
 - **Képregénycím:** csak rövid kódok vannak (pl. `ASM`), a feloldásukhoz külső forrás kell.
 - **Irány:** az élek irányítatlanok.
-- **Valódi közösségbeosztás:** a Karate Club-bal ellentétben nincs ismert „helyes” felosztás. A közösségek csak kézzel vethetők össze ismert csapatokkal.
+- **Alapigazság:** a Karate Club-bal ellentétben nincs ismert „helyes” felosztás vagy rangsor. Az eredmények külső forrással vethetők össze, pl. egy top 40 listával vagy az ismert csapatokkal.
 
 ## Adatminőség: már kezelt és nyitott pontok
 
-- **Kezelve a notebookban:** szóközök a nevek végén (141 név), hurokélek (2232 sor), duplikált párok, 3 csonkolt név.
+- **Kezelve a notebookban:** a képregényoszlop hibái (lásd a Tisztítás részt).
 - **Javítva az adatfájlokban:**
   - `MALAN Sometimes spel` → `MALAN`, mindhárom fájlban;
   - `SPIDER-MAN/PETER PARKERKER` → `SPIDER-MAN/PETER PARKER`, a `nodes.csv`-ben.
@@ -125,4 +125,4 @@ A bipartit gráf hősökre vetítve (`nx.bipartite.weighted_projected_graph`) ug
   - `DEAD HEAD/` és `DEADHEAD`;
   - `RAZOR WIRE/` és `RAZORWIRE`;
   - a ` | ` utótagú alternatív változatok, pl. `HUSK/PAIGE GUTHRIE |`.
-- **Nyitott:** a `hero-network.csv` súlyai és a vetítés közti eltérés (lásd fent).
+- **Nyitott:** a 17 átnézendő képregénykód.

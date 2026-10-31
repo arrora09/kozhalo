@@ -1,0 +1,41 @@
+poll_year,rank,character,points,first_place_votes,graph_node,match_note,source_url
+2019,1,Spider-Man (Peter Parker),4722,239,SPIDER-MAN/PETER PARKER,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,2,Captain America (Steve Rogers),3200,75,CAPTAIN AMERICA,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,3,Wolverine (James Howlett),2449,48,WOLVERINE/LOGAN,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,4,Daredevil,2037,44,DAREDEVIL/MATT MURDO,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,5,Thor (Odinson),2022,35,THOR/DR. DONALD BLAK,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,6,Hulk,1569,25,HULK/DR. ROBERT BRUC,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,7,Iron Man,1499,24,IRON MAN/TONY STARK,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,8,Doctor Doom,1363,15,DR. DOOM/VICTOR VON,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,9,Magneto,1192,17,MAGNETO/MAGNUS/ERIC,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,10,Deadpool,1031,7,DEADPOOL/JACK/WADE W,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,11,Cyclops,1005,28,CYCLOPS/SCOTT SUMMER,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,12,Doctor Strange,996,9,DR. STRANGE/STEPHEN,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,13,Storm,978,16,STORM/ORORO MUNROE S,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,14,Thing,929,17,THING/BENJAMIN J. GR,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,15,Jean Grey,902,28,MARVEL GIRL/JEAN GRE,Main Jean Grey node used.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,16,Hawkeye (Clint Barton),900,12,HAWK,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,17,Black Panther,770,10,BLACK PANTHER/T'CHAL,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,18,Scarlet Witch,767,8,SCARLET WITCH/WANDA,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,19,She-Hulk,754,17,SHE-HULK/JENNIFER WA,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,20,Silver Surfer,716,8,SILVER SURFER/NORRIN,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,21,Kitty Pryde,693,8,SHADOWCAT/KATHERINE,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,22,Nightcrawler,686,7,NIGHTCRAWLER/KURT WA,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,23,Captain Marvel (Carol Danvers),665,11,BINARY/CAROL DANVERS,Carol Danvers is listed under her Binary identity in the graph.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,24,Rogue,649,15,ROGUE /,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,25,Black Widow,588,7,BLACK WIDOW/NATASHA,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,26,Punisher,570,5,PUNISHER II/FRANK CA,Main Punisher node; 'PUNISHER/FRANK CASTL' is a one-comic spelling variant.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,27,Venom,564,6,VENOM/EDDIE BROCK,Eddie Brock assumed; the list does not name the host.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,28,Emma Frost,551,19,WHITE QUEEN/EMMA FRO,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,29,Spider-Man (Miles Morales),538,8,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,30,Gambit,523,17,GAMBIT/REMY LEBEAU,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,31,Moon Knight,505,4,MOON KNIGHT/MARC SPE,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,32,Ms. Marvel,495,12,,"Not in the graph: read as Kamala Khan, because Carol Danvers is listed separately at #23.",https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,33,Vision,462,11,VISION,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,34,Mister Fantastic,446,6,MR. FANTASTIC/REED R,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,35,Thanos,413,7,THANOS,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,36,Winter Soldier,408,4,BUCKY/BUCKY BARNES,The Winter Soldier is James Barnes; this identity is after the dataset ends.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,37,Iron Fist,386,11,IRON FIST/DANIEL RAN,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,38,X-23,353,4,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,39,Beast,352,5,BEAST/HENRY &HANK& P,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/
+2019,40,Iceman,351,7,ICEMAN/ROBERT BOBBY,,https://www.cbr.com/top-100-dc-marvel-characters-master-list/

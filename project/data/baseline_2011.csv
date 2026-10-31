@@ -1,0 +1,41 @@
+poll_year,rank,character,points,first_place_votes,graph_node,match_note,source_url
+2011,1,Spider-Man (Peter Parker),5519,277,SPIDER-MAN/PETER PARKER,,https://www.cbr.com/2011-top-marvel-characters-3-1/
+2011,2,Captain America (Steve Rogers),4062,106,CAPTAIN AMERICA,,https://www.cbr.com/2011-top-marvel-characters-3-1/
+2011,3,Thor,2736,40,THOR/DR. DONALD BLAK,,https://www.cbr.com/2011-top-marvel-characters-3-1/
+2011,4,Wolverine,2728,54,WOLVERINE/LOGAN,,https://www.cbr.com/2011-top-marvel-characters-4/
+2011,5,Hulk (Bruce Banner),2286,41,HULK/DR. ROBERT BRUC,,https://www.cbr.com/2011-top-marvel-characters-5/
+2011,6,Daredevil,2280,71,DAREDEVIL/MATT MURDO,,https://www.cbr.com/2011-top-marvel-characters-7-6/
+2011,7,Iron Man (Tony Stark),2226,34,IRON MAN/TONY STARK,,https://www.cbr.com/2011-top-marvel-characters-7-6/
+2011,8,Doctor Doom,1808,23,DR. DOOM/VICTOR VON,,https://www.cbr.com/2011-top-marvel-characters-9-8/
+2011,9,Cyclops,1736,37,CYCLOPS/SCOTT SUMMER,,https://www.cbr.com/2011-top-marvel-characters-9-8/
+2011,10,Hawkeye (Clint Barton),1607,25,HAWK,,https://www.cbr.com/2011-top-marvel-characters-11-10/
+2011,11,The Thing (Ben Grimm),1526,43,THING/BENJAMIN J. GR,,https://www.cbr.com/2011-top-marvel-characters-11-10/
+2011,12,Magneto,1432,15,MAGNETO/MAGNUS/ERIC,,https://www.cbr.com/2011-top-marvel-characters-14-12/
+2011,13,Nightcrawler,1284,34,NIGHTCRAWLER/KURT WA,,https://www.cbr.com/2011-top-marvel-characters-14-12/
+2011,14,Doctor Strange,1258,9,DR. STRANGE/STEPHEN,,https://www.cbr.com/2011-top-marvel-characters-14-12/
+2011,15,Deadpool,1207,28,DEADPOOL/JACK/WADE W,,https://www.cbr.com/2011-top-marvel-characters-17-15/
+2011,16,Iron Fist,1123,17,IRON FIST/DANIEL RAN,,https://www.cbr.com/2011-top-marvel-characters-17-15/
+2011,17,The White Queen (Emma Frost),1004,16,WHITE QUEEN/EMMA FRO,,https://www.cbr.com/2011-top-marvel-characters-17-15/
+2011,18,The Punisher (Frank Castle),995,17,PUNISHER II/FRANK CA,Main Punisher node; 'PUNISHER/FRANK CASTL' is a one-comic spelling variant.,https://www.cbr.com/2011-top-marvel-characters-20-18/
+2011,19,Kitty Pryde,970,18,SHADOWCAT/KATHERINE,,https://www.cbr.com/2011-top-marvel-characters-20-18/
+2011,20,Jean Grey,968,38,MARVEL GIRL/JEAN GRE,Main Jean Grey node used.,https://www.cbr.com/2011-top-marvel-characters-20-18/
+2011,21,Storm,918,18,STORM/ORORO MUNROE S,,https://www.cbr.com/2011-top-marvel-characters-25-21/
+2011,22,Beast,894,10,BEAST/HENRY &HANK& P,,https://www.cbr.com/2011-top-marvel-characters-25-21/
+2011,23,Rogue,876,15,ROGUE /,,https://www.cbr.com/2011-top-marvel-characters-25-21/
+2011,24,"Captain America (James ""Bucky"" Barnes)",795,5,BUCKY/BUCKY BARNES,James Barnes as a character; his time as Captain America is after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-25-21/
+2011,25,Silver Surfer,719,16,SILVER SURFER/NORRIN,,https://www.cbr.com/2011-top-marvel-characters-25-21/
+2011,26,She-Hulk (Jennifer Walters),716,14,SHE-HULK/JENNIFER WA,,https://www.cbr.com/2011-top-marvel-characters-30-26/
+2011,27,Luke Cage,633,3,"CAGE, LUKE/CARL LUCA",,https://www.cbr.com/2011-top-marvel-characters-30-26/
+2011,28,Nick Fury,619,7,"FURY, COL. NICHOLAS",,https://www.cbr.com/2011-top-marvel-characters-30-26/
+2011,29,Ms. Marvel (Carol Danvers),587,6,BINARY/CAROL DANVERS,Carol Danvers is listed under her Binary identity in the graph.,https://www.cbr.com/2011-top-marvel-characters-30-26/
+2011,30,Mister Fantastic,565,13,MR. FANTASTIC/REED R,,https://www.cbr.com/2011-top-marvel-characters-30-26/
+2011,31,Scarlet Witch,556,9,SCARLET WITCH/WANDA,,https://www.cbr.com/2011-top-marvel-characters-35-31/
+2011,32,The Multiple Man (Jamie Madrox),554,11,MULTIPLE MAN/JAMES A,,https://www.cbr.com/2011-top-marvel-characters-35-31/
+2011,33,Sub-Mariner (Namor),539,7,SUB-MARINER/NAMOR MA,,https://www.cbr.com/2011-top-marvel-characters-35-31/
+2011,34,Gambit,505,17,GAMBIT/REMY LEBEAU,,https://www.cbr.com/2011-top-marvel-characters-35-31/
+2011,35,Nova (Richard Rider),486,6,NOVA/RICHARD RIDER,,https://www.cbr.com/2011-top-marvel-characters-35-31/
+2011,36,X-23,470,12,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-40-36/
+2011,37,Moon Knight,461,8,MOON KNIGHT/MARC SPE,,https://www.cbr.com/2011-top-marvel-characters-40-36/
+2011,38,Black Panther (T'Challa),457,9,BLACK PANTHER/T'CHAL,,https://www.cbr.com/2011-top-marvel-characters-40-36/
+2011,39,Black Widow (Natasha Romanova),452,3,BLACK WIDOW/NATASHA,,https://www.cbr.com/2011-top-marvel-characters-40-36/
+2011,40,Ant-Man/Giant-Man/Goliath/Yellowjacket/Dr. Pym/Wasp (Hank Pym),437,6,ANT-MAN/DR. HENRY J.,Main Hank Pym node; the character also has other costumed identities.,https://www.cbr.com/2011-top-marvel-characters-40-36/
