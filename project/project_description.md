@@ -144,7 +144,7 @@ A nem fokszám alapú mértékeket az óriáskomponensen számoljuk. A rangsorok
 | Elemzési kérdés és alapigazság kiválasztása | Kész |
 | CBR 2011 és 2019 top 40 összegyűjtése | Kész |
 | Nevek párosítása a gráffal | Kész |
-| A bipartit gráf elemzései | Hátra van |
-| Centralitások számítása | Hátra van |
-| Összevetés a listákkal | Hátra van |
-| Értelmezés és ellenőrzés | Hátra van |
+| A bipartit gráf elemzései | Kész |
+| Centralitások számítása | Kész |
+| Összevetés a listákkal | Kész |
+| Értelmezés és ellenőrzés | Kész |
