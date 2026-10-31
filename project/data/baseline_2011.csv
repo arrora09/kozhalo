@@ -39,3 +39,63 @@ poll_year,rank,character,points,first_place_votes,graph_node,match_note,source_u
 2011,38,Black Panther (T'Challa),457,9,BLACK PANTHER/T'CHAL,,https://www.cbr.com/2011-top-marvel-characters-40-36/
 2011,39,Black Widow (Natasha Romanova),452,3,BLACK WIDOW/NATASHA,,https://www.cbr.com/2011-top-marvel-characters-40-36/
 2011,40,Ant-Man/Giant-Man/Goliath/Yellowjacket/Dr. Pym/Wasp (Hank Pym),437,6,ANT-MAN/DR. HENRY J.,Main Hank Pym node; the character also has other costumed identities.,https://www.cbr.com/2011-top-marvel-characters-40-36/
+2011,41,Iceman,432,6,ICEMAN/ROBERT BOBBY,,https://www.cbr.com/2011-top-marvel-characters-45-41/
+2011,42,Colossus,428,6,COLOSSUS II/PETER RA,,https://www.cbr.com/2011-top-marvel-characters-45-41/
+2011,43,Human Torch (Johnny Storm),426,6,HUMAN TORCH/JOHNNY S,,https://www.cbr.com/2011-top-marvel-characters-45-41/
+2011,44,Thanos,424,3,THANOS,,https://www.cbr.com/2011-top-marvel-characters-45-41/
+2011,45,Loki,423,6,LOKI [ASGARDIAN],,https://www.cbr.com/2011-top-marvel-characters-45-41/
+2011,46,Spider-Woman (Jessica Drew),420,4,SPIDER-WOMAN/JESSICA,,https://www.cbr.com/2011-top-50-marvel-characters-50-46/
+2011,47,Invisible Woman,393,6,INVISIBLE WOMAN/SUE,,https://www.cbr.com/2011-top-50-marvel-characters-50-46/
+2011,48,Psylocke,384,2,PSYLOCKE/ELISABETH B,,https://www.cbr.com/2011-top-50-marvel-characters-50-46/
+2011,49,Cable,377,12,"SUMMERS, NATHAN CHRI",Cable is listed under his real name; this node appears in the C series.,https://www.cbr.com/2011-top-50-marvel-characters-50-46/
+2011,50,Vision,373,5,VISION,,https://www.cbr.com/2011-top-50-marvel-characters-50-46/
+2011,51,Professor X,360,3,PROFESSOR X/CHARLES,,https://www.cbr.com/2011-top-marvel-characters-55-51/
+2011,52,Jessica Jones,350,6,,Not in the graph.,https://www.cbr.com/2011-top-marvel-characters-55-51/
+2011,53,Norman Osborn,341,2,GREEN GOBLIN/NORMAN,"Main Norman Osborn node; 'OSBORN, NORMAN' is a small separate node.",https://www.cbr.com/2011-top-marvel-characters-55-51/
+2011,54,Ghost Rider,326,4,GHOST RIDER II/JOHNN,Johnny Blaze assumed; the list does not name the host.,https://www.cbr.com/2011-top-marvel-characters-55-51/
+2011,55,Hercules,325,1,HERCULES [GREEK GOD],,https://www.cbr.com/2011-top-marvel-characters-55-51/
+2011,56,Venom,319,4,VENOM/EDDIE BROCK,Eddie Brock assumed; the list does not name the host.,https://www.cbr.com/2011-top-marvel-characters-60-56/
+2011,57,Captain Britain,295,6,CAPTAIN BRITAIN/BRIA,,https://www.cbr.com/2011-top-marvel-characters-60-56/
+2011,58,Jubilee,293,12,JUBILEE/JUBILATION L,,https://www.cbr.com/2011-top-marvel-characters-60-56/
+2011,59,Mystique,275,1,MYSTIQUE/RAVEN DARKH,,https://www.cbr.com/2011-top-marvel-characters-60-56/
+2011,60,Galactus,271,1,GALACTUS/GALAN,,https://www.cbr.com/2011-top-marvel-characters-60-56/
+2011,61,Archangel (Warren Worthington),270,3,ANGEL/WARREN KENNETH,,https://www.cbr.com/2011-top-marvel-characters-64-61/
+2011,62,Howard the Duck,265,4,HOWARD THE DUCK,,https://www.cbr.com/2011-top-marvel-characters-64-61/
+2011,63,Wasp (Janet Van Dyne),264,4,WASP/JANET VAN DYNE,,https://www.cbr.com/2011-top-marvel-characters-64-61/
+2011,64,Mary Jane Watson,258,1,"WATSON-PARKER, MARY",,https://www.cbr.com/2011-top-marvel-characters-64-61/
+2011,65,Black Bolt,256,1,BLACK BOLT/BLACKANTO,,https://www.cbr.com/2011-top-marvel-characters-68-65/
+2011,66,Adam Warlock,252,7,WARLOCK II/ADAM WARL,,https://www.cbr.com/2011-top-marvel-characters-68-65/
+2011,67,Magik,245,5,MAGIK/ILLYANA RASPUT,,https://www.cbr.com/2011-top-marvel-characters-68-65/
+2011,68,Juggernaut,235,1,JUGGERNAUT/CAIN MARK,,https://www.cbr.com/2011-top-marvel-characters-68-65/
+2011,69,Captain Marvel,229,8,CAPTAIN MARVEL/CAPTA,Mar-Vell assumed; Carol Danvers and Monica Rambeau are listed separately.,https://www.cbr.com/2011-top-marvel-characters-72-69/
+2011,70,Quicksilver,225,2,QUICKSILVER/PIETRO M,,https://www.cbr.com/2011-top-marvel-characters-72-69/
+2011,71,J. Jonah Jameson,224,3,"JAMESON, J. JONAH",,https://www.cbr.com/2011-top-marvel-characters-72-69/
+2011,72,Princess Powerful/Bruiser (Molly Hayes),222,2,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-72-69/
+2011,73,Dazzler,221,9,DAZZLER II/ALLISON B,,https://www.cbr.com/2011-top-marvel-characters-76-73/
+2011,74,Wiccan,220,3,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-76-73/
+2011,75,Wonder Man,210,3,WONDER MAN/SIMON WIL,,https://www.cbr.com/2011-top-marvel-characters-76-73/
+2011,76,Northstar,209,2,NORTHSTAR/JEAN-PAUL,,https://www.cbr.com/2011-top-marvel-characters-76-73/
+2011,77,Rocket Raccoon,208,3,ROCKET RACCOON,,https://www.cbr.com/2011-top-marvel-characters-80-77/
+2011,78,Havok,195,5,HAVOK/ALEX SUMMERS,,https://www.cbr.com/2011-top-marvel-characters-80-77/
+2011,79,Squirrel Girl,189,3,SQUIRREL GIRL/,,https://www.cbr.com/2011-top-marvel-characters-80-77/
+2011,80,Spider-Man (Ben Reilly),181,1,SPIDER-MAN CLONE/BEN,,https://www.cbr.com/2011-top-marvel-characters-80-77/
+2011,81,Machine Man (Aaron Stack),172,2,MACHINE MAN/X-51,,https://www.cbr.com/2011-top-marvel-characters-84-81/
+2011,82,Fantomex,170,1,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-84-81/
+2011,83,Bullseye,169,1,BULLSEYE II/BENJAMIN,Main Bullseye node; 'BULLSEYE' is a one-comic node.,https://www.cbr.com/2011-top-marvel-characters-84-81/
+2011,84,Taskmaster,168,2,TASKMASTER,,https://www.cbr.com/2011-top-marvel-characters-84-81/
+2011,85,Beta Ray Bill,167,,BETA RAY BILL,,https://www.cbr.com/2011-top-marvel-characters-88-85/
+2011,86,Black Cat (Felicia Hardy),166,1,BLACK CAT/FELICIA HA,,https://www.cbr.com/2011-top-marvel-characters-88-85/
+2011,87,Hulkling (Teddy Altman),165,1,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-88-85/
+2011,88,Cannonball (Sam Guthrie),160,1,CANNONBALL II/SAM GU,,https://www.cbr.com/2011-top-marvel-characters-88-85/
+2011,89,Elektra,157,1,ELEKTRA/ELEKTRA NATC,,https://www.cbr.com/2011-top-marvel-characters-92-89/
+2011,90,Amadeus Cho,156,2,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-92-89/
+2011,91,Dark Wolverine (Daken),152,1,,Not in the graph: first appeared after the dataset ends.,https://www.cbr.com/2011-top-marvel-characters-92-89/
+2011,92,Star-Lord (Peter Quill),149,2,,Not in the graph: no matching node found.,https://www.cbr.com/2011-top-marvel-characters-92-89/
+2011,93,Shang-Chi,148,1,SHANG-CHI,,https://www.cbr.com/2011-top-marvel-characters-96-93/
+2011,94,Black Knight (Dane Whitman),142,3,BLACK KNIGHT V/DANE,,https://www.cbr.com/2011-top-marvel-characters-96-93/
+2011,95,Songbird (Melissa Gold),141,2,SCREAMING MIMI/MELIS,Melissa Gold is listed under her earlier name.,https://www.cbr.com/2011-top-marvel-characters-96-93/
+2011,96,Monica Rambeau,133,1,CAPTAIN MARVEL II/MO,Monica Rambeau is listed under her Captain Marvel identity.,https://www.cbr.com/2011-top-marvel-characters-96-93/
+2011,97,Quasar (Wendell Vaughn),132,5,QUASAR III/WENDELL V,,https://www.cbr.com/2011-top-marvel-characters-100-97/
+2011,98,Hellcat (Patsy Walker),130,1,HELLCAT/PATSY WALKER,,https://www.cbr.com/2011-top-marvel-characters-100-97/
+2011,99,War Machine (James Rhodes),127,1,IRON MAN IV/JAMES R.,James Rhodes is listed under his Iron Man identity.,https://www.cbr.com/2011-top-marvel-characters-100-97/
+2011,100,The Kingpin (Wilson Fisk),125,,KINGPIN/WILSON FISK,,https://www.cbr.com/2011-top-marvel-characters-100-97/

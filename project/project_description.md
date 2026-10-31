@@ -41,8 +41,8 @@ Az adathalmazban nincs alapigazság, ezért külső listákat használunk.
 
 | Szerep | Lista | Módszer |
 |---|---|---|
-| **Fő alapigazság** | [CBR 2011 Top Marvel Characters](https://www.cbr.com/2011-top-marvel-characters-100-97/), top 40 | Közel 1400 olvasó szavazata, pontozással |
-| **Ellenőrzés** | [CBR 2019 Top Marvel Characters](https://www.cbr.com/top-100-dc-marvel-characters-master-list/), top 40 | Közel 1100 olvasó szavazata, pontozással |
+| **Fő alapigazság** | [CBR 2011 Top Marvel Characters](https://www.cbr.com/2011-top-marvel-characters-100-97/), top 40 és top 100 | Közel 1400 olvasó szavazata, pontozással |
+| **Ellenőrzés** | [CBR 2019 Top Marvel Characters](https://www.cbr.com/top-100-dc-marvel-characters-master-list/), top 40 és top 50 | Közel 1100 olvasó szavazata, pontozással |
 
 A listák külön fájlban vannak: `data/baseline_2011.csv` és `data/baseline_2019.csv`.
 
@@ -62,7 +62,7 @@ A gráf beolvasása, tisztítása és kirajzolása a `beadando.ipynb` „Data lo
 
 ### 2. A külső listák előkészítése
 
-A CBR 2011 és 2019 top 40 egy-egy CSV fájlban van, a szereplők párosítva a gráf csúcsneveivel (pl. `Iron Man` → `IRON MAN/TONY STARK`).
+A CBR 2011 top 100 és a 2019 top 50 egy-egy CSV fájlban van, a szereplők párosítva a gráf csúcsneveivel (pl. `Iron Man` → `IRON MAN/TONY STARK`).
 
 | Oszlop | Tartalom |
 |---|---|
@@ -72,7 +72,7 @@ A CBR 2011 és 2019 top 40 egy-egy CSV fájlban van, a szereplők párosítva a 
 | `match_note` | Megjegyzés a nem egyértelmű párosításokhoz |
 | `source_url` | A forrásoldal |
 
-A 2011-es listából 39, a 2019-esből 37 szereplő van meg a gráfban. Hiányzik az X-23 mindkét listáról, valamint Miles Morales és Ms. Marvel (Kamala Khan) a 2019-esről, mert az adathalmaz vége után jelentek meg. A két lista gráfban is meglévő szereplői közül 33 közös.
+A top 40-ből a 2011-es listán 39, a 2019-esen 37 szereplő van meg a gráfban. A teljes listákból a 2011-esen 91, a 2019-esen 46. A hiányzók többsége az adathalmaz vége után jelent meg (pl. X-23, Miles Morales, Kamala Khan). Star-Lord régebbi szereplő, neki nincs megfelelő csúcsa.
 
 Párosítási szabályok:
 
@@ -111,7 +111,8 @@ A nem fokszám alapú mértékeket az óriáskomponensen számoljuk. A rangsorok
 | Top-40 átfedés | Hány szereplő van benne mindkét top 40-ben? |
 | Spearman-féle rangkorreláció | Mennyire egyezik a listás és a gráfbeli sorrend? |
 
-- **Viszonyítási alap:** ha 6439 hősből véletlenszerűen választanánk 40-et, a várható átfedés a listával kb. 0,25 szereplő.
+- **Viszonyítási alap:** ha 6439 hősből véletlenszerűen választanánk 40-et, a várható átfedés a listával kb. 0,25 szereplő (top 50-nél 0,39, top 100-nál 1,55).
+- **Lista hossza:** az összevetés három fejezetben készül: a 2011-es és 2019-es top 40, a 2011-es top 100 és a 2019-es top 50.
 - **Rangkorreláció:** a párosított szereplőkre számoljuk, a teljes hősrangsorbeli helyük alapján.
 
 ### 6. Értelmezés és ellenőrzés
@@ -142,7 +143,7 @@ A nem fokszám alapú mértékeket az óriáskomponensen számoljuk. A rangsorok
 |---|---|
 | Bipartit gráf beolvasása, tisztítása, kirajzolása | Kész |
 | Elemzési kérdés és alapigazság kiválasztása | Kész |
-| CBR 2011 és 2019 top 40 összegyűjtése | Kész |
+| CBR 2011 top 100 és 2019 top 50 összegyűjtése | Kész |
 | Nevek párosítása a gráffal | Kész |
 | A bipartit gráf elemzései | Kész |
 | Centralitások számítása | Kész |
