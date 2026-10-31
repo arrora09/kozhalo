@@ -2,21 +2,22 @@
 
 ## Áttekintés
 
-A projekt a Marvel Universe Social Network adathalmazból épített bipartit hős–képregény gráfot vizsgálja. A cél annak ellenőrzése, hogy a gráf szerkezetéből számolt fontosság mennyire adja vissza azt, amit egy gráftól független, külső lista a legfontosabb Marvel-szereplőknek tart.
+A projekt a Marvel Universe Social Network adathalmazból épített bipartit hős–képregény gráfot vizsgálja. A cél annak ellenőrzése, hogy a gráf szerkezetéből számolt fontosság mennyire adja vissza azt, amit egy gráftól független, külső lista a legnépszerűbb Marvel-szereplőknek tart.
 
 Az adatok és a tisztítás részletes leírása a `DATA.md`-ben, a kód a `beadando.ipynb`-ben található.
 
 ## Elemzési kérdés
 
-> **Mennyire adja vissza a gráf szerkezete azt, hogy kik a legfontosabb Marvel-szereplők?**
+> **Mennyire adja vissza a gráf szerkezete, hogy kik a legnépszerűbb Marvel-szereplők?**
 
 Alkérdések:
 
-1. Mekkora az átfedés a külső top 40 lista és a gráfból számolt top 40 között?
+1. Mekkora az átfedés a külső lista és a gráf azonos hosszúságú toplistája között?
 2. Mennyire egyezik a sorrend a külső lista és a gráfból számolt rangsorok között?
-3. Melyik centralitási mérték áll legközelebb a külső listához?
+3. Különböznek-e a centralitási mértékek abban, mennyire állnak közel a külső listához?
 4. Mely szereplők térnek el a legjobban, és mi magyarázhatja az eltérést?
-5. Fennmaradnak-e a következtetések, ha a külső listát egy másik évből vett listára cseréljük?
+5. Fennmaradnak-e a következtetések, ha a lista hosszát vagy az évét megváltoztatjuk?
+6. Milyen szerkezeti tulajdonságai vannak a gráfnak (egyenlőtlenség, csoportok, sorozatok), és ezek hogyan magyarázzák az eltéréseket?
 
 ## Adat: a gráf
 
@@ -136,16 +137,3 @@ A nem fokszám alapú mértékeket az óriáskomponensen számoljuk. A rangsorok
 - **Névváltozatok:** egy szereplő több csúcsként is megjelenhet, ami csökkentheti a mért centralitását.
 - **Sorozatok súlya:** a sokáig futó sorozatok szereplői a szereplések számában eleve előnyben vannak.
 - **Átnézendő kódok:** 17 képregénykód javítása nyitott maradt, kb. 20 élt érint, ezért az eredményt érdemben nem befolyásolja.
-
-## Állapot
-
-| Feladat | Állapot |
-|---|---|
-| Bipartit gráf beolvasása, tisztítása, kirajzolása | Kész |
-| Elemzési kérdés és alapigazság kiválasztása | Kész |
-| CBR 2011 top 100 és 2019 top 50 összegyűjtése | Kész |
-| Nevek párosítása a gráffal | Kész |
-| A bipartit gráf elemzései | Kész |
-| Centralitások számítása | Kész |
-| Összevetés a listákkal | Kész |
-| Értelmezés és ellenőrzés | Kész |

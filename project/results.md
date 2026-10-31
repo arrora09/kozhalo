@@ -2,7 +2,7 @@
 
 ## Rövid válasz
 
-**Kérdés:** mennyire adja vissza a gráf szerkezete azt, hogy kik a legfontosabb Marvel-szereplők?
+**Kérdés:** mennyire adja vissza a gráf szerkezete, hogy kik a legnépszerűbb Marvel-szereplők?
 
 **Válasz:** a gráf megtalálja a csoportot, de a sorrendet nem.
 
@@ -280,3 +280,53 @@ Véletlen átfedés: 0,39. Az átfedés aránya K = 10-től 50-ig 0,50 és 0,70 
 - **Hiányzó szereplők:** a gráfban nem szereplő karakterek kimaradnak, ezért a legnagyobb elérhető átfedés kisebb a lista hosszánál.
 - **Statisztika:** a p-értékek nincsenek többszörös tesztelésre korrigálva, a köztiség pedig 1000 mintacsúcsból becsült érték.
 - **Adat:** 17 képregénykód nyitott maradt, de ezek csak kb. 20 élt érintenek.
+
+## Kérdések és válaszok
+
+A kérdések a `project_description.md` főkérdése és alkérdései.
+
+### Főkérdés: Mennyire adja vissza a gráf szerkezete, hogy kik a legnépszerűbb Marvel-szereplők?
+
+**Részben: a csoportot megtalálja, a sorrendet csak közepesen adja vissza.** A szavazási listák szereplőinek kb. 60–70%-a a gráf azonos hosszúságú toplistáján is rajta van, a sorrenddel viszont csak közepes a korreláció (0,29–0,59). A gráf a jelenlétet méri, ami összefügg a népszerűséggel, de nem azonos vele.
+
+### 1. Mekkora az átfedés a külső lista és a gráf azonos hosszúságú toplistája között?
+
+**Nagy, minden listán nagyságrendekkel a véletlen fölött van.**
+
+| Lista | Átfedés | Szereplők a gráfban | Véletlen átfedés |
+|---|---|---|---|
+| 2011, top 40 | 23–27 | 39 | 0,25 |
+| 2019, top 40 | 22–25 | 37 | 0,25 |
+| 2011, top 100 | 56–63 | 91 | 1,55 |
+| 2019, top 50 | 31–32 | 46 | 0,39 |
+
+### 2. Mennyire egyezik a sorrend a külső lista és a gráfból számolt rangsorok között?
+
+**Közepesen.** A Spearman-korreláció 0,29 és 0,59 között van, mindig pozitív, és minden érték p = 0,05 alatt van, többszörös tesztelésre való korrekció nélkül. A sorrend tehát hasonlít a szavazáséra, de nem azonos vele.
+
+### 3. Különböznek-e a centralitási mértékek abban, mennyire állnak közel a külső listához?
+
+**Alig, kivéve a sajátvektor-centralitást.** A fokszám, a közelség, a köztiség, a PageRank és a sorozatok száma nagyjából egyformán teljesít, a 2011-es top 40-nél pl. a fokszám 0,490, a köztiség 0,489. A sajátvektor-centralitás korrelációja mind a négy listán a legalacsonyabb. A mértékek különbségét nem teszteltük statisztikailag, ezért ez leíró eredmény.
+
+### 4. Mely szereplők térnek el a legjobban, és mi magyarázhatja az eltérést?
+
+**Az olvasók a ritkán szereplő kedvenceket, a gráf a sokat szereplő csapattagokat és mellékszereplőket sorolja előrébb.**
+
+- **Az olvasók sorolják előrébb:** Squirrel Girl (79. a szavazásban, 4645. a gráfban), Rocket Raccoon (77., 1475.), Deadpool (15., 255.), Bucky Barnes (24., 348.).
+- **A gráf sorolja előrébb:** Human Torch (43., 6.), Mister Fantastic (30., 7.), Mary Jane Watson (64., 14.), J. Jonah Jameson (71., 20.).
+
+A lehetséges magyarázat, hogy egy szereplő sok képregényben jelenhet meg kedveltség nélkül is, és fordítva, valamint hogy az adathalmaz vége (kb. 2001) utáni népszerűség nincs a gráfban. Ez értelmezés, mert a népszerűség oka nincs az adatban.
+
+### 5. Fennmaradnak-e a következtetések, ha a lista hosszát vagy az évét megváltoztatjuk?
+
+**A fő következtetések igen, a korreláció nagysága nem.** Az átfedés aránya hosszabb listán és a másik évben is hasonló, és az eltérések mintázata is ugyanaz. A korreláció viszont érzékeny a választásra: a 2011-es listán a hosszabbítással nőtt (a fokszámnál 0,490-ről 0,567-re), a 2019-esen csökkent (0,524-ről 0,416-ra). A különbség okát nem tudjuk biztosan.
+
+### 6. Milyen szerkezeti tulajdonságai vannak a gráfnak (egyenlőtlenség, csoportok, sorozatok), és ezek hogyan magyarázzák az eltéréseket?
+
+**A gráf erősen egyenlőtlen és csoportos, de ez az eltéréseket csak részben magyarázza.**
+
+- **Egyenlőtlenség:** a hősök felső 1%-a birtokolja az élek 32,7%-át, a véletlen gráfban ez 1,8%. Ezért a sokat szereplő hősök eleve kiemelkednek a rangsorokban.
+- **Csoportok:** az átlagos klaszterezettség 0,157 a konfigurációs modell 0,042-jével szemben. A Fantasztikus Négyes tagjainak redundanciája magas (0,72–0,97), ami illik ahhoz, hogy a gráf a csapattagokat előrébb sorolja. Ez nem általános: Iron Man redundanciája 0,373, mégis előrébb van a gráfban.
+- **Sorozatok:** a hősök több mint fele egyetlen sorozatban szerepel, a legszélesebb elérésűek pedig nagyjából ugyanazok, akik a fokszámrangsort vezetik.
+
+A szerkezet és az eltérések kapcsolatát nem mértük minden szereplőre, ezért ez a kapcsolat nem bizonyított.
