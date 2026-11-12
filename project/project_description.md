@@ -2,22 +2,22 @@
 
 ## Áttekintés
 
-A projekt a Marvel Universe Social Network adathalmazból épített bipartit hős–képregény gráfot vizsgálja. A cél annak ellenőrzése, hogy a gráf szerkezetéből számolt fontosság mennyire adja vissza azt, amit egy gráftól független, külső lista a legnépszerűbb Marvel-szereplőknek tart.
+A projekt a Marvel Universe Social Network adathalmazból épített bipartit hős–képregény gráfot vizsgálja. A cél annak vizsgálata, hogy összefügg-e a szereplők közkedveltsége a szereplések számával, és hogy a gráf szerkezete ezen mennyit árnyal. A közkedveltséget egy gráftól független, külső lista méri.
 
 Az adatok és a tisztítás részletes leírása a `DATA.md`-ben, a kód a `beadando.ipynb`-ben található.
 
 ## Elemzési kérdés
 
-> **Mennyire adja vissza a gráf szerkezete, hogy kik a legnépszerűbb Marvel-szereplők?**
+> **Van-e összefüggés a Marvel-szereplők közkedveltsége és aközött, hogy hány képregényben szerepelnek?**
 
 Alkérdések:
 
-1. Mekkora az átfedés a külső lista és a gráf azonos hosszúságú toplistája között?
-2. Mennyire egyezik a sorrend a külső lista és a gráfból számolt rangsorok között?
-3. Különböznek-e a centralitási mértékek abban, mennyire állnak közel a külső listához?
-4. Mely szereplők térnek el a legjobban, és mi magyarázhatja az eltérést?
-5. Fennmaradnak-e a következtetések, ha a lista hosszát vagy az évét megváltoztatjuk?
-6. Milyen szerkezeti tulajdonságai vannak a gráfnak (egyenlőtlenség, csoportok, sorozatok), és ezek hogyan magyarázzák az eltéréseket?
+1. Azok a szereplők a legkedveltebbek, akik a legtöbb képregényben szerepelnek?
+2. Ha a szereplőket a szereplések száma szerint sorba állítjuk, mennyire hasonlít ez a sorrend az olvasói szavazás sorrendjére?
+3. Erősebb lesz-e az összefüggés, ha nemcsak a szereplések számát nézzük, hanem azt is, hogy kikkel és hogyan kapcsolódnak a szereplők a többiekhez?
+4. Kik azok a szereplők, akik sokat szerepelnek, mégsem kedveltek, vagy keveset szerepelnek, mégis népszerűek, és mi lehet ennek az oka?
+5. Érvényes marad-e az összefüggés, ha hosszabb listával vagy egy másik év szavazásával dolgozunk?
+6. Hogyan oszlanak meg a szereplések a Marvel-univerzumban, és ez mennyire magyarázza az eltéréseket?
 
 ## Adat: a gráf
 
