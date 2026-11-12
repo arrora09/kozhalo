@@ -59,7 +59,7 @@ Az alapigazság korlátja, hogy a kedveltséget méri, nem a hálózati fontoss�
 
 ### 1. Adatelőkészítés
 
-A gráf beolvasása, tisztítása és kirajzolása a `beadando.ipynb` „Data loading and cleaning” fejezetében készült el.
+A gráf beolvasása, tisztítása és kirajzolása a `beadando.ipynb` „1. Adatok beolvasása és tisztítása” fejezetében készült el.
 
 ### 2. A külső listák előkészítése
 
@@ -126,7 +126,7 @@ A nem fokszám alapú mértékeket az óriáskomponensen számoljuk. A rangsorok
 ## Elvárt eredmények
 
 - A külső listák CSV formátumban, a forrás megjelölésével (`data/baseline_2011.csv`, `data/baseline_2019.csv`).
-- A `beadando.ipynb` „Analysis” fejezete: a bipartit gráf elemzései, rangsorok, összevetések, ábrák.
+- A `beadando.ipynb` elemző és összevető fejezetei (2–6.): a bipartit gráf elemzései, rangsorok, összevetések, ábrák.
 - Írásos válasz az elemzési kérdésre és az alkérdésekre, az eltérések magyarázatával.
 - Annak bemutatása, hogy melyik eszköz mire alkalmas, és mit nem tud megmutatni.
 

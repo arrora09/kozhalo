@@ -21,19 +21,22 @@ Az intervallumok a hat gráfmérték legkisebb és legnagyobb értékét jelenti
 
 ## Hol mit találsz
 
-| Lépés | `beadando.ipynb` fejezet | Fájl |
-|---|---|---|
-| 1. Tisztítás | Adatok beolvasása és tisztítása | `data/nodes.csv`, `data/edges.csv` |
-| 2–5. A gráf leírása | Elemzés | |
-| 6–7. Összevetés, top 40 | Összevetés: top 40 listák | `data/baseline_2011.csv`, `data/baseline_2019.csv` |
-| 8. Összevetés, 2011 | Összevetés: 2011-es top 100 | `data/baseline_2011.csv` |
-| 9. Összevetés, 2019 | Összevetés: 2019-es top 50 | `data/baseline_2019.csv` |
+Az alábbi részek számozása megegyezik a `beadando.ipynb` fejezeteinek számozásával, így a 2.2. itt és a notebookban is ugyanaz a rész.
 
-Az adatok leírása a `DATA.md`-ben, a feladat a `project_description.md`-ben van.
+| Szám | `beadando.ipynb` fejezet | Fájl |
+|---|---|---|
+| 1. | Adatok beolvasása és tisztítása | `data/nodes.csv`, `data/edges.csv` |
+| 2.1–2.4. | Elemzés: a gráf leírása | |
+| 3.1–3.2. | Összevetés: top 40 listák | `data/baseline_2011.csv`, `data/baseline_2019.csv` |
+| 4. | Összevetés: 2011-es top 100 | `data/baseline_2011.csv` |
+| 5. | Összevetés: 2019-es top 50 | `data/baseline_2019.csv` |
+| 6. | Összegzés | |
+
+Az adatok leírása a `DATA.md`-ben, a feladat a `project_description.md`-ben, a kérdések és a vizsgálatok kapcsolata a `questions_and_methods.md`-ben van.
 
 ## 1. Adattisztítás és a gráf felépítése
 
-**Hol nézd:** „Adatok beolvasása és tisztítása”, 0–6. rész.
+**Hol nézd:** „1. Adatok beolvasása és tisztítása”, 1.1–1.7. rész.
 
 **Mire jó:** a hibás bejegyzésekből hamis csúcsok lennének, az eltérő írásmódok pedig egy képregény hőseit több csúcsra osztanák szét. Mindkettő torzítaná a fokszámokat.
 
@@ -58,9 +61,9 @@ Az adatok leírása a `DATA.md`-ben, a feladat a `project_description.md`-ben va
 
 **Értelmezés:** a gráf nagyon ritka, de szinte teljesen egyben van, ezért az útvonalalapú mértékeket az óriáskomponensen érdemes számolni.
 
-## 2. Fokszám-eloszlás
+## 2.1. Fokszám-eloszlás
 
-**Hol nézd:** „Elemzés” → „1. Fokszám-eloszlás”: egy táblázat és egy kétpaneles ábra.
+**Hol nézd:** „2.1. Fokszám-eloszlás”: egy táblázat és egy kétpaneles ábra.
 
 **Mit csinál:** megszámolja, hány képregényben szerepel egy hős, és hány hős van egy képregényben, majd ezt egy ugyanakkora véletlen bipartit gráffal veti össze (`gnmk_random_graph`).
 
@@ -81,9 +84,9 @@ Az adatok leírása a `DATA.md`-ben, a feladat a `project_description.md`-ben va
 
 **Korlát:** nem teszteltük, hogy az eloszlás hatványfüggvényt követ-e, csak azt, hogy eltér a véletlentől.
 
-## 3. Bipartit centralitás
+## 2.2. Bipartit centralitás
 
-**Hol nézd:** „Elemzés” → „2. Bipartit centralitás”: a top 10 táblázat és a mértékek korrelációs táblája.
+**Hol nézd:** „2.2. Bipartit centralitás”: a top 10 táblázat és a mértékek korrelációs táblája.
 
 **Mire jó, miért:** a „fontos” többféleképpen definiálható, ezért több mértékkel számolunk. Ha csak egyet használnánk, nem tudnánk, hogy az eredmény a fogalomból vagy a választott mértékből következik.
 
@@ -109,9 +112,9 @@ A mértékek korrelációja az összes hősön 0,54 és 0,95 között van. A leg
 
 **Értelmezés:** a csúcson a mértékek többnyire egyetértenek. A sajátvektor-centralitás más szempontot követ: a Bosszúállók és a Fantasztikus Négyes sűrű magját emeli ki, nem a képregények számát.
 
-## 4. Sorozatszintű összesítés
+## 2.3. Sorozatszintű összesítés
 
-**Hol nézd:** „Elemzés” → „3. Sorozatszintű összesítés”: kiírt számok és toplisták.
+**Hol nézd:** „2.3. Sorozatszintű összesítés”: kiírt számok és toplisták.
 
 **Mit csinál:** a képregénykód első része a sorozat (az `ASM 22` az `ASM` sorozathoz tartozik), és megszámolja, hány sorozatban szerepel egy hős.
 
@@ -131,9 +134,9 @@ A mértékek korrelációja az összes hősön 0,54 és 0,95 között van. A leg
 
 **Korlát:** a kötetek külön sorozatnak számítanak (`ASM` és `ASM2`), mert az adatból nem biztos, hogy összetartoznak.
 
-## 5. Bipartit klaszterezés és redundancia
+## 2.4. Bipartit klaszterezés és redundancia
 
-**Hol nézd:** „Elemzés” → „4. Bipartit klaszterezés és redundancia”: két táblázat.
+**Hol nézd:** „2.4. Bipartit klaszterezés és redundancia”: két táblázat.
 
 **Mit csinál:**
 - **Klaszterezés** (`dot` mód): mennyire fednek át egy hős képregényei a vele együtt szereplő hősök képregényeivel.
@@ -165,9 +168,9 @@ A mértékek korrelációja az összes hősön 0,54 és 0,95 között van. A leg
 
 **Korlát:** a nagy hősök klaszterezettsége mindig alacsony (0,005–0,008), mert óriási a szomszédságuk. Ezt nem szabad úgy érteni, hogy nem tartoznak csoporthoz.
 
-## 6. Összevetés a szavazásokkal: top 40
+## 3.1. Összevetés a szavazásokkal: top 40
 
-**Hol nézd:** „Összevetés: top 40 listák” → „1. Összevetés a szavazásokkal”: két táblázat.
+**Hol nézd:** „3.1. Összevetés a szavazásokkal”: két táblázat.
 
 **Mire jó, miért:** a gráf önmagában nem bizonyít semmit a fontosságról, ezért független külső listával mérjük. A szavazás azért jó alapigazság, mert nem a szereplésszámból készült.
 
@@ -192,9 +195,9 @@ A mértékek korrelációja az összes hősön 0,54 és 0,95 között van. A leg
 
 **Korlát:** a p-értékek nincsenek többszörös tesztelésre korrigálva, és csak népszerű szereplők közti sorrendet mérünk.
 
-## 7. A legnagyobb eltérések: top 40
+## 3.2. A legnagyobb eltérések: top 40
 
-**Hol nézd:** „Összevetés: top 40 listák” → „2. A legnagyobb eltérések”: két táblázat, a csak a gráf top 40-ében lévők listája és egy pontdiagram.
+**Hol nézd:** „3.2. A legnagyobb eltérések”: két táblázat, a csak a gráf top 40-ében lévők listája és egy pontdiagram.
 
 **Mit csinál:** a `gap` a gráfbeli és a szavazási helyezés hányadosa, a fokszám alapján.
 
@@ -219,9 +222,9 @@ Csak a gráf top 40-ében vannak például: Mary Jane Watson, J. Jonah Jameson, 
 
 **Korlát:** a `gap` arány, ezért a lista elején lévő szereplőknél kis helyezéskülönbség is nagy értéket adhat.
 
-## 8. Összevetés: 2011-es top 100
+## 4. Összevetés: 2011-es top 100
 
-**Hol nézd:** „Összevetés: 2011-es top 100”: táblázat, átfedési görbe és pontdiagram.
+**Hol nézd:** „4. Összevetés: 2011-es top 100”: táblázat, átfedési görbe és pontdiagram.
 
 **Mire jó, miért:** a top 40 szűk tartomány. A hosszabb lista kevésbé népszerű szereplőket is tartalmaz, így kiderül, hogy az egyezés csak a lista elején áll-e fenn.
 
@@ -242,9 +245,9 @@ Véletlen átfedés: 1,55. Az átfedés aránya K = 10-től 100-ig 0,55 és 0,72
 
 **Értelmezés:** a korreláció minden mértékre magasabb, mint a top 40-nél, és az egyezés a lista végéig megmarad.
 
-## 9. Összevetés: 2019-es top 50
+## 5. Összevetés: 2019-es top 50
 
-**Hol nézd:** „Összevetés: 2019-es top 50”: táblázat, átfedési görbe és pontdiagram.
+**Hol nézd:** „5. Összevetés: 2019-es top 50”: táblázat, átfedési görbe és pontdiagram.
 
 **Mire jó, miért:** ez az ellenőrzés. Ha a következtetés csak egy listán állna fenn, az lehetne a lista sajátossága.
 
@@ -289,7 +292,7 @@ A kérdések a `project_description.md` főkérdése és alkérdései. A szerepl
 
 **Van: pozitív, közepes erősségű összefüggés.** A szavazási listák szereplőinek kb. 60%-a a szereplések száma szerinti toplistán is rajta van, ami nagyságrendekkel több a véletlennél. A sorrenddel viszont csak közepes a korreláció (0,42–0,57). A sok szereplés tehát gyakran jár együtt a népszerűséggel, de nem határozza meg.
 
-### 1. Azok a szereplők a legkedveltebbek, akik a legtöbb képregényben szerepelnek?
+### 1. alkérdés: Azok a szereplők a legkedveltebbek, akik a legtöbb képregényben szerepelnek?
 
 **Többnyire igen, de nem mind.** A szereplések száma szerinti toplistákon a listás szereplők kb. 60%-a szerepel:
 
@@ -300,15 +303,15 @@ A kérdések a `project_description.md` főkérdése és alkérdései. A szerepl
 | 2011, top 100 | 62 | 91 | 1,55 |
 | 2019, top 50 | 31 | 46 | 0,39 |
 
-### 2. Ha a szereplőket a szereplések száma szerint sorba állítjuk, mennyire hasonlít ez a sorrend az olvasói szavazás sorrendjére?
+### 2. alkérdés: Ha a szereplőket a szereplések száma szerint sorba állítjuk, mennyire hasonlít ez a sorrend az olvasói szavazás sorrendjére?
 
 **Közepesen.** A Spearman-korreláció a szereplések számával 0,490 (2011, top 40), 0,524 (2019, top 40), 0,567 (2011, top 100) és 0,416 (2019, top 50). Mindig pozitív, és mind p = 0,05 alatt van, többszörös tesztelésre való korrekció nélkül. A sorrend tehát hasonlít a szavazáséra, de nem azonos vele.
 
-### 3. Erősebb lesz-e az összefüggés, ha nemcsak a szereplések számát nézzük, hanem azt is, hogy kikkel és hogyan kapcsolódnak a szereplők a többiekhez?
+### 3. alkérdés: Erősebb lesz-e az összefüggés, ha nemcsak a szereplések számát nézzük, hanem azt is, hogy kikkel és hogyan kapcsolódnak a szereplők a többiekhez?
 
 **Nem lesz érdemben erősebb.** A közelség, a köztiség, a PageRank és a sorozatok száma nagyjából ugyanolyan közel áll a szavazáshoz, mint a szereplések száma. A 2011-es top 40-nél pl. a szereplések száma 0,490, a köztiség 0,489. A legjobb kapcsolódási mérték is legfeljebb 0,06-tal jobb (a 2019-es top 50-nél a köztiség 0,473, a szereplések száma 0,416). A sajátvektor-centralitás minden listán gyengébb. A különbségeket nem teszteltük statisztikailag, ezért ez leíró eredmény.
 
-### 4. Kik azok a szereplők, akik sokat szerepelnek, mégsem kedveltek, vagy keveset szerepelnek, mégis népszerűek, és mi lehet ennek az oka?
+### 4. alkérdés: Kik azok a szereplők, akik sokat szerepelnek, mégsem kedveltek, vagy keveset szerepelnek, mégis népszerűek, és mi lehet ennek az oka?
 
 **Sokat szerepelnek, mégsem annyira kedveltek:** a csapattagok és a mellékszereplők, pl. Human Torch (43. a szavazásban, 6. a szereplések száma szerint), Mister Fantastic (30., 7.), Mary Jane Watson (64., 14.) és J. Jonah Jameson (71., 20.).
 
@@ -316,11 +319,11 @@ A kérdések a `project_description.md` főkérdése és alkérdései. A szerepl
 
 A lehetséges magyarázat, hogy a csapatban vagy mellékszereplőként rendszeresen megjelenő szereplők sok szereplést gyűjtenek kedveltség nélkül is, a kedvencek népszerűsége pedig sokszor az adathalmaz vége (kb. 2001) utáni időszakból ered. Ez értelmezés, mert a népszerűség oka nincs az adatban.
 
-### 5. Érvényes marad-e az összefüggés, ha hosszabb listával vagy egy másik év szavazásával dolgozunk?
+### 5. alkérdés: Érvényes marad-e az összefüggés, ha hosszabb listával vagy egy másik év szavazásával dolgozunk?
 
 **Az összefüggés megmarad, az erőssége változik.** Hosszabb listán és a másik év szavazásán is hasonló az átfedés aránya, és a korreláció mindenhol pozitív. A nagysága viszont érzékeny a választásra: a 2011-es listán a hosszabbítással nőtt (0,490-ről 0,567-re), a 2019-esen csökkent (0,524-ről 0,416-ra). A különbség okát nem tudjuk biztosan.
 
-### 6. Hogyan oszlanak meg a szereplések a Marvel-univerzumban, és ez mennyire magyarázza az eltéréseket?
+### 6. alkérdés: Hogyan oszlanak meg a szereplések a Marvel-univerzumban, és ez mennyire magyarázza az eltéréseket?
 
 **Nagyon egyenlőtlenül, és ez az eltérések egy részét magyarázza.**
 

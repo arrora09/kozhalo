@@ -19,7 +19,7 @@ A `nodes.csv` és az `edges.csv` konzisztens egymással: minden hős és képreg
 
 ## 1. gráf: bipartit hős–képregény gráf
 
-**Építés** (`beadando.ipynb`, „Data loading and cleaning” fejezet): a csúcsok és az élek a megtisztított `edges.csv`-ből jönnek (`bipartite=0` a hős, `1` a képregény). A hős- és képregénynevek között nincs ütközés.
+**Építés** (`beadando.ipynb`, „1. Adatok beolvasása és tisztítása” fejezet): a csúcsok és az élek a megtisztított `edges.csv`-ből jönnek (`bipartite=0` a hős, `1` a képregény). A hős- és képregénynevek között nincs ütközés.
 
 | Mérőszám | Tisztítás után |
 |---|---|
