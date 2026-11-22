@@ -20,7 +20,7 @@ ugynevezett "marvel age of comics" 61-től
 tisztítás utáni adatok
 majd 20 000 csúcs, amiből 6439 karakter, 12592 képregény, stb tulajdonságok
 
-egy ábrát a gráfokról beszúrni kattintás utánra a nagyról
+egy ábrát a gráfokról beszúrnia kis gráfról, aztán kattintás utánra a nagy teljes gráfról
 
 # 3.dia: adathalmaz bemutatás: CBR szavazási listák
 
