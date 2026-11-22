@@ -20,9 +20,8 @@ A laborok a `lab_codes/` mappában vannak. Ahol a módszer nem laborból szárma
 | 03 | `lab_codes/03/Lab_03_Connectivity.ipynb` | Összefüggő komponensek, óriáskomponens |
 | 04 | `lab_codes/04/Lab_04_Network_visualization.ipynb` | Hálózatrajzolás, részgráfok megjelenítése |
 | 05 | `lab_codes/05/Lab_05_Random_Networks.ipynb` | Fokszám-eloszlás, összevetés véletlen hálózatokkal, óriáskomponens |
-| 09 | `lab_codes/09/Lab_09_Equivalence.ipynb` | Jaccard- és koszinusz-hasonlóság a szomszédhalmazok között (tervezett) |
 
-A 06-os (közösségkeresés), a 07-es (befolyásterjedés) és a 08-as (járványmodellezés) labort nem használjuk, mert egyik kérdéshez sem kapcsolódnak.
+A 06-os (közösségkeresés), a 07-es (befolyásterjedés), a 08-as (járványmodellezés) és a 09-es (ekvivalencia, Jaccard- és koszinusz-hasonlóság) labort nem használjuk.
 
 ## Előkészítés: a gráf felépítése
 
@@ -82,7 +81,6 @@ A főkérdésre az 1. és a 2. alkérdés együtt válaszol, a 3–6. alkérdés
 |---|---|---|---|
 | Eltéréstábla (`gap`: gráfbeli és szavazási helyezés aránya) | A két irányban legjobban eltérő szereplőket emeli ki | „3.2.”, „4.2.” és „5.2. A legnagyobb eltérések”: 37., 43. és 49. cella. Kódnevek: `gap_table`, `show_gaps`, `GAP_MEASURE`. Kimenet: két táblázat („Readers rate them far above…” és „The graph rates them above…”) és pontdiagram | Saját, nem laborból |
 | Csak a gráf toplistáján szereplők | Megmutatja, kiket emel ki a gráf a népszerűségükön túl | „3.2. A legnagyobb eltérések”, 37. cella. Kódnév: `top_unlisted`. Kimenet: a cella utolsó kiírt sora | Saját, nem laborból |
-| Hasonlóság a sztárokhoz (tervezett) | Megmérhető vele, hogy a túlértékelt mellékszereplők egy sztár képregényeiben szerepelnek-e | Még nincs a beadandóban | Lab 09 (Jaccard- és koszinusz-hasonlóság) |
 
 **Eredmény a beadandóban:** a 3.2., 4.2. és 5.2. rész „Eredmény” cellája.
 
@@ -103,6 +101,5 @@ A főkérdésre az 1. és a 2. alkérdés együtt válaszol, a 3–6. alkérdés
 | Fokszám-eloszlás, összevetés véletlen gráffal | Megmutatja, hogy néhány szereplő uralja-e a szerepléseket | „2.1. Fokszám-eloszlás”, 22. cella. Kódnevek: `hero_degrees`, `random_graph`, `top_share`, `plot_ccdf`. Kimenet: összesítő táblázat és kétpaneles ábra | Lab 05 (fokszám-eloszlás, véletlen gráf), a bipartit véletlen gráf saját (`gnmk_random_graph`) |
 | Sorozatszintű összesítés | Megmutatja, egy sorozathoz kötődnek-e a szereplők | „2.3. Sorozatszintű összesítés”, 28. cella. Kódnevek: `hero_series`, `series_per_hero`, `heroes_per_series`. Kimenet: kiírt számok és toplisták | Saját, nem laborból |
 | Bipartit klaszterezés és redundancia, összevetés konfigurációs modellel | Megmutatja, csapatokban szerepelnek-e a szereplők, és ez a fokszámokból következik-e | „2.4. Bipartit klaszterezés és redundancia”, 31. cella. Kódnevek: `clustering_summary`, `config_graph`. Kimenet: két táblázat (átlagok és a top 10 hős) | Lab 02, Lab 05 (klaszterezettség), a bipartit változat és a konfigurációs modell saját (`nx.bipartite`) |
-| Hasonlóság a sztárokhoz, minden szereplőre (tervezett) | Az eltérések és a szerkezet kapcsolatát minden szereplőre megméri, nem csak példákon | Még nincs a beadandóban | Lab 09 (Jaccard- és koszinusz-hasonlóság) |
 
 **Eredmény a beadandóban:** a 2.1., 2.3. és 2.4. rész „Eredmény” cellája.
