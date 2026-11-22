@@ -18,7 +18,7 @@ mikori adat? Talán 2001-ig gyűjtött 1961-től
 ugynevezett "marvel age of comics" 61-től
 
 tisztítás utáni adatok
-majd 20 000 csúcs, amiből 6439 karakter, 12592 képregény
+majd 20 000 csúcs, amiből 6439 karakter, 12592 képregény, stb tulajdonságok
 
 egy ábrát a gráfokról beszúrni kattintás utánra a nagyról
 
